@@ -38,7 +38,12 @@ jobs:
         run : docker -v
       - name: aws version
         run : aws --version
-     
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+         aws-region: us-east-1
+         role-to-assume: arn:aws:iam::394744526265:user/rahul
+         role-session-name: MySessionName
       - name: aws list configuration 
         run : aws configure list
         
