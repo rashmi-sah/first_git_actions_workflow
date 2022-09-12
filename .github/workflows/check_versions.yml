@@ -35,7 +35,10 @@ jobs:
       - name: aws version
         run : aws --version
       - name: aws list configuration 
-        run : aws configure -input=false
+        env:
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run : echo $AWS_ACCESS_KEY_ID
 
         
         
