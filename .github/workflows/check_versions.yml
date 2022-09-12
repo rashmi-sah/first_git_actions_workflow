@@ -36,5 +36,7 @@ jobs:
         run : python -v
       - name: docker version
         run : docker -v
+      - name: aws version
+        run : aws --version
         
           
