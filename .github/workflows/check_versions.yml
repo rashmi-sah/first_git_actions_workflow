@@ -38,8 +38,12 @@ jobs:
         run : docker -v
       - name: aws version
         run : aws --version
+      - name: Configure AWS Credentials
+        with:
+         aws-region: "us-east-1"
       - name: aws list configuration 
         run : aws configure list
+        
         
         
         
