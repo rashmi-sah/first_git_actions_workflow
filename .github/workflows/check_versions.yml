@@ -45,6 +45,9 @@ jobs:
          role-to-assume: arn:aws:iam::394744526265:user/rahul
          role-session-name: MySessionName
       - name: aws list configuration 
+        env:
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run : aws configure list
         
         
