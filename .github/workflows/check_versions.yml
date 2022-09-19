@@ -34,12 +34,14 @@ jobs:
         run : docker -v
       - name: aws version
         run : aws --version
+      - name: ansible version 
+        run : ansible --version
       - name: aws list configuration 
         env:
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run : aws configure list
-
+      
         
         
         
